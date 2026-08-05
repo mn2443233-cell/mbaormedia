@@ -1,18 +1,9 @@
-// =====================================================================
-// CONFIGURATION DU SITE — MBAOR TV
-// Modifiez toutes les valeurs ci-dessous pour mettre à jour les liens,
-// vidéos et coordonnées sans toucher aux autres fichiers.
-// =====================================================================
-// Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Config Firebase
 export const firebaseConfig = {
-  apiKey: "AIzaSyB85UPVLCMxFoQJoODRGRH4oRIIK3sdM7Y",
+  apiKey: "AIzaSyB85UPVLCmXFoQJo0DRGRH4oRIIK3sdM7Y",
   authDomain: "mbaortv-fdaae.firebaseapp.com",
   projectId: "mbaortv-fdaae",
   storageBucket: "mbaortv-fdaae.firebasestorage.app",
@@ -21,73 +12,21 @@ export const firebaseConfig = {
   measurementId: "G-C8JBM0N626"
 };
 
-// Initialize Firebase
+// Initialisation Firebase
 export const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
+// Configuration générale du site
 const siteConfig = {
   siteName: "MBAOR TV",
   tagline: "Le miroir du Mbaor",
-
-  // --- Chaîne YouTube ---
   youtubeUrl: "https://youtube.com/@mbaor-tv3812",
-  // Lien d'intégration pour la playlist "dernières vidéos" (mis à jour
-  // automatiquement par YouTube à partir de l'ID de la chaîne).
-  youtubeEmbedPlaylist:
-    "https://www.youtube.com/embed/videoseries?list=UUbqMwK5JDBwK4c2-XynCqag",
-
-  // --- Vidéo de présentation (promo locale, remplaçable) ---
-  // Utilisez soit un fichier local dans /public/video, soit un lien YouTube.
+  youtubeEmbedPlaylist: "https://www.youtube.com/embed/videoseries?list=UUbqMwK5JDBwK4c2-XynCqag",
   promoVideoUrl: "/video/promo.mp4",
-
-  // --- Contact ---
   whatsappUrl: "https://wa.me/qr/OOBHHU6GCF6HB1",
   phoneMain: "76 460 13 31",
   phoneThiaryMbaor: "78 730 63 35",
   emailAddress: "contact@mbaortv.sn",
-
-  // --- Réseaux sociaux (à compléter) ---
-  facebookUrl: "MON_LIEN_FACEBOOK",
-  tiktokUrl: "MON_LIEN_TIKTOK",
-
-  // --- Lien vers une autre plateforme (ex: site du groupe de presse) ---
-  platformUrl: "MON_LIEN_PLATEFORME_ICI",
-
-  // --- Rubriques éditoriales ---
-  categories: [
-    { title: "Information", desc: "L'actualité locale et nationale, vérifiée et expliquée." },
-    { title: "Interview", desc: "Des échanges avec les acteurs qui font vivre le Mbaor." },
-    { title: "Entretien", desc: "Des rencontres approfondies avec la communauté." },
-    { title: "Sport", desc: "Navétanes, football local et grands rendez-vous sportifs." },
-    { title: "Culture", desc: "Traditions, événements et vie culturelle du terroir." },
-    { title: "Religion", desc: "Actualités religieuses, Ramadan, Touba et grands rendez-vous." },
-  ],
-
-  // --- Statistiques (facilement modifiables) ---
-  stats: [
-    { value: 10, suffix: "K+", label: "Abonnés YouTube" },
-    { value: 500, suffix: "+", label: "Vidéos publiées" },
-    { value: 6, suffix: "", label: "Rubriques couvertes" },
-    { value: 100, suffix: "%", label: "Ancré dans le Mbaor" },
-  ],
-
-  // ===================================================================
-  // ESPACE ADMINISTRATEUR — publication en temps réel
-  // ===================================================================
-  // Ces informations viennent de votre projet Firebase (gratuit).
-  // Guide complet : voir ADMIN.md à la racine du projet.
-  // 1. Allez sur https://console.firebase.google.com
-  // 2. Créez un projet, activez "Firestore Database" et
-  //    "Authentication > Email/Password"
-  // 3. Dans "Paramètres du projet > Général", copiez la config web
-  //    ci-dessous.
-  firebaseConfig: {
-    apiKey: "VOTRE_API_KEY",
-    authDomain: "VOTRE_PROJET.firebaseapp.com",
-    projectId: "VOTRE_PROJET",
-    storageBucket: "VOTRE_PROJET.appspot.com",
-    messagingSenderId: "VOTRE_SENDER_ID",
-    appId: "VOTRE_APP_ID",
-  },
+  firebase: firebaseConfig
 };
 
 export default siteConfig;
