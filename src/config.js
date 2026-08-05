@@ -3,7 +3,27 @@
 // Modifiez toutes les valeurs ci-dessous pour mettre à jour les liens,
 // vidéos et coordonnées sans toucher aux autres fichiers.
 // =====================================================================
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+export const firebaseConfig = {
+  apiKey: "AIzaSyB85UPVLCMxFoQJoODRGRH4oRIIK3sdM7Y",
+  authDomain: "mbaortv-fdaae.firebaseapp.com",
+  projectId: "mbaortv-fdaae",
+  storageBucket: "mbaortv-fdaae.firebasestorage.app",
+  messagingSenderId: "333688364482",
+  appId: "1:333688364482:web:da4e1c0a6bc2aa70aeca5b",
+  measurementId: "G-C8JBM0N626"
+};
+
+// Initialize Firebase
+export const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 const siteConfig = {
   siteName: "MBAOR TV",
   tagline: "Le miroir du Mbaor",
