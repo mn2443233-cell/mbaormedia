@@ -1,16 +1,27 @@
-// =====================================================================
+// ============================================================
 // CONFIGURATION DU SITE — MBAOR TV
 // Modifiez toutes les valeurs ci-dessous pour mettre à jour les liens,
 // vidéos et coordonnées sans toucher aux autres fichiers.
-// =====================================================================
+// ============================================================
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// ============================================================
+// CONFIGURATION FIREBASE — publication en temps réel
+// ============================================================
+// Ces informations viennent de votre projet Firebase (gratuit).
+// Guide complet : voir ADMIN.md à la racine du projet.
+// Pour changer de projet Firebase, modifiez UNIQUEMENT les valeurs
+// ci-dessous (il n'existe qu'un seul bloc de config dans tout le fichier).
+// 1. Allez sur https://console.firebase.google.com
+// 2. Créez un projet, activez "Firestore Database" et
+//    "Authentication > Email/Password"
+// 3. Dans "Paramètres du projet > Général", copiez la config web
+//    ici.
 export const firebaseConfig = {
   apiKey: "AIzaSyB85UPVLCMxFoQJoODRGRH4oRIIK3sdM7Y",
   authDomain: "mbaortv-fdaae.firebaseapp.com",
@@ -18,12 +29,13 @@ export const firebaseConfig = {
   storageBucket: "mbaortv-fdaae.firebasestorage.app",
   messagingSenderId: "333688364482",
   appId: "1:333688364482:web:da4e1c0a6bc2aa70aeca5b",
-  measurementId: "G-C8JBM0N626"
+  measurementId: "G-C8JBM0N626",
 };
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const analytics = getAnalytics(app);
+
 const siteConfig = {
   siteName: "MBAOR TV",
   tagline: "Le miroir du Mbaor",
@@ -69,25 +81,6 @@ const siteConfig = {
     { value: 6, suffix: "", label: "Rubriques couvertes" },
     { value: 100, suffix: "%", label: "Ancré dans le Mbaor" },
   ],
-
-  // ===================================================================
-  // ESPACE ADMINISTRATEUR — publication en temps réel
-  // ===================================================================
-  // Ces informations viennent de votre projet Firebase (gratuit).
-  // Guide complet : voir ADMIN.md à la racine du projet.
-  // 1. Allez sur https://console.firebase.google.com
-  // 2. Créez un projet, activez "Firestore Database" et
-  //    "Authentication > Email/Password"
-  // 3. Dans "Paramètres du projet > Général", copiez la config web
-  //    ci-dessous.
-  firebaseConfig: {
-    apiKey: "VOTRE_API_KEY",
-    authDomain: "VOTRE_PROJET.firebaseapp.com",
-    projectId: "VOTRE_PROJET",
-    storageBucket: "VOTRE_PROJET.appspot.com",
-    messagingSenderId: "VOTRE_SENDER_ID",
-    appId: "VOTRE_APP_ID",
-  },
 };
 
 export default siteConfig;
